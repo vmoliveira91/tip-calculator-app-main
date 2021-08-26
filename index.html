@@ -6,8 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -27,25 +27,79 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-
+      
       background-color: white;
 
       font-family: 'Space Mono';
       font-size: 24px;
     }
 
+    .column-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: space-between;
+
+      width: 320px;
+
+      padding: 20px;
+      color: hsl(184, 14%, 56%);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    nav > button {
+      width: 100px;
+      height: 40px;
+
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Space Mono';
+      color: white;
+
+      background-color: hsl(183, 100%, 15%);
+
+      border: none;
+      border-radius: 10px;
+    }
+
+    nav > input {
+      width: 100px;
+
+      text-align: center;
+    }
+
+    .input-container {
+      position: relative;
+      
+      display: flex;
+      flex-direction: column;
+    }
+    
     input {
       background-color: hsl(189, 41%, 97%);
 
-      height: 30px;
+      height: 40px;
 
       border: none;
       border-radius: 5px;
-    }
 
-    .bill {
-      background: hsl(189, 41%, 97%) url('/images/icon-dollar.svg') no-repeat scroll 7px 7px;
-      padding-left:30px;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Space Mono';
+      color: hsl(183, 100%, 15%);
+      text-align: right;
+    }
+    
+    .input-container > img {
+      position: absolute;
+      top: 11.5px;
+      left: 10px;
     }
   </style>
 </head>
@@ -54,10 +108,13 @@
     <article class="column-1">
       <article>
         <label>Bill</label>
-        <input class="bill" type="number">
+        <span class="input-container">
+          <input type="number">
+          <img src="images/icon-dollar.svg">
+        </span>
       </article>
 
-      <article>
+      <article class="tip">
         <label>Select Tip %</label>
         <nav>
           <button>5%</button>
@@ -71,7 +128,10 @@
       
       <article>
         <label>Number of People</label>
-        <input class="person" type="number">
+        <span class="input-container">
+          <input class="person" type="number">
+          <img src="images/icon-person.svg">
+        </span>
       </article>
     </article>
 
