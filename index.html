@@ -31,7 +31,7 @@
       
       background-color: white;
 
-      width: fit-content;
+      width: 800px;
       padding: 20px;
 
       border-radius: 25px;
@@ -46,9 +46,9 @@
       justify-content: space-between;
       align-content: space-between;
 
-      width: 350px;
-      /*padding: 20px;*/
+      width: 390px;
       margin-bottom: 30px;
+      margin-right: 10px;
       
       color: hsl(184, 14%, 56%);
     }
@@ -59,6 +59,10 @@
 
     .column-1 > article > label {
       font-size: 16px;
+    }
+
+    .column-1 > article:last-child{
+      margin-bottom: 10px;
     }
 
     nav {
@@ -128,16 +132,78 @@
 
     input[type="number"]::placeholder {
       color:hsl(184, 14%, 56%);
-      
+            
       -moz-appearance: textfield;
 
       padding-right: 10px;
+    }
+
+    input[type="text"]::placeholder {
+      color: hsl(186, 14%, 43%);
+      font-size: 22px;
     }
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+
+    .column-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: space-between;
+
+      width: 390px;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      padding: 30px;
+
+      border-radius: 25px;
+      box-sizing: border-box;
+
+      background-color: hsl(183, 100%, 15%);
+    }
+
+    .column-2 > article {
+      margin-top: 30px;
+    }
+
+    .column-2 > article > article {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      font-size: 14px;
+      color: hsl(184, 14%, 56%);      
+    }
+
+    .column-2 > article > article:last-child {
+      margin-top: 40px;
+    }
+
+    .column-2 > article > article > article > label:first-child {
+      font-size:16px;
+      color: white;
+    }
+
+    .column-2 > article > article > label {
+      font-size: 32px;
+      color: hsl(172, 67%, 45%);
+    }
+
+    .column-2 > button {
+      height: 40px;
+
+      border: none;
+      border-radius: 10px;
+
+      background-color: #0d686d;
+
+      color: #076066;
+      font-size: 18px;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -177,11 +243,24 @@
       <article>
         <article>
           <article>
+            <label>Tip Amount</label>
+            <br />
+            <label>/ person</label>
           </article>
+          <label>$0.00</label>
         </article>
 
-        <button>RESET</button>
+        <article>
+          <article>
+            <label>Total</label>
+            <br />
+            <label>/ person</label>
+          </article>
+          <label>$0.00</label>
+        </article>
       </article>
+
+      <button>RESET</button>
     </article>
   </main>  
 </body>
